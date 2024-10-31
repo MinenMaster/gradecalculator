@@ -1,14 +1,16 @@
+// Function to add another input for grade and weight
 function addGradeInput() {
     const container = document.getElementById('grades-container');
     const gradeInput = document.createElement('div');
     gradeInput.classList.add('grade-input');
     gradeInput.innerHTML = `
-        <input type="number" placeholder="Grade" class="grade">
-        <input type="number" placeholder="Weight (%)" class="weight">
+        <input type="number" placeholder="Grade" class="grade" oninput="calculateGrade()">
+        <input type="number" placeholder="Weight (%)" class="weight" oninput="calculateGrade()">
     `;
     container.appendChild(gradeInput);
 }
 
+// Function to calculate weighted average
 function calculateGrade() {
     const grades = document.querySelectorAll('.grade');
     const weights = document.querySelectorAll('.weight');
