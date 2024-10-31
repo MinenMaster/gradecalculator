@@ -13,7 +13,10 @@
             <div id="grades-container">
                 <div class="grade-input">
                     <input type="number" placeholder="Grade" class="grade" oninput="calculateGrade()">
-                    <input type="number" placeholder="Weight (%)" class="weight" oninput="calculateGrade()">
+                    <div class="weight-container">
+                        <input type="number" placeholder="Weight (%)" class="weight" oninput="calculateGrade()" value="100">
+                        <span>%</span>
+                    </div>
                 </div>
             </div>
             <button onclick="addGradeInput()">Add Another Grade</button>
