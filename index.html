@@ -7,17 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Grade Calculator</h1>
-    <div class="calculator">
-        <div id="grades-container">
-            <div class="grade-input">
-                <input type="number" placeholder="Grade" class="grade">
-                <input type="number" placeholder="Weight (%)" class="weight">
+    <div class="container">
+        <h1>Grade Calculator</h1>
+        <div class="calculator">
+            <div id="grades-container">
+                <div class="grade-input">
+                    <input type="number" placeholder="Grade" class="grade" oninput="calculateGrade()">
+                    <input type="number" placeholder="Weight (%)" class="weight" oninput="calculateGrade()">
+                </div>
             </div>
+            <button onclick="addGradeInput()">Add Another Grade</button>
+            <div id="result">Weighted Average Grade: 0</div>
         </div>
-        <button onclick="addGradeInput()">Add Another Grade</button>
-        <button onclick="calculateGrade()">Calculate Average</button>
-        <div id="result"></div>
     </div>
     <script src="script.js"></script>
 </body>
