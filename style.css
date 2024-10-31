@@ -7,8 +7,15 @@ body {
     margin: 0;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 h1 {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .calculator {
@@ -51,4 +58,5 @@ button:hover {
     margin-top: 20px;
     font-size: 1.2em;
     font-weight: bold;
+    text-align: center;
 }
