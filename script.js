@@ -1,4 +1,3 @@
-// Funktion für Dark Mode Toggle
 const toggleDarkMode = () => {
     document.body.classList.toggle("dark-mode");
     localStorage.setItem(
@@ -7,7 +6,6 @@ const toggleDarkMode = () => {
     );
 };
 
-// Dark Mode Präferenz aus dem Local Storage laden
 if (localStorage.getItem("darkMode") === "true") {
     document.body.classList.add("dark-mode");
 }
@@ -29,7 +27,6 @@ function addGradeInput() {
     container.appendChild(gradeInput);
 }
 
-// Funktion zur Berechnung des gewichteten Durchschnitts
 function calculateGrade() {
     const grades = document.querySelectorAll(".grade");
     const weights = document.querySelectorAll(".weight");
