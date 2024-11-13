@@ -5,6 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
@@ -26,7 +27,7 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.grade-input {
+.grades {
     display: flex;
     gap: 10px;
     margin-bottom: 10px;
@@ -38,27 +39,8 @@ input {
     border-radius: 4px;
 }
 
-.grade {
+.grade, .weight {
     width: 45%;
-}
-
-.weight-container {
-    position: relative;
-    width: 45%;
-}
-
-.weight {
-    width: 100%;
-    padding-right: 20px;
-}
-
-.weight-container span {
-    position: absolute;
-    right: 8px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #555;
-    font-size: 0.9em;
 }
 
 button {
@@ -70,6 +52,7 @@ button {
     background-color: #007bff;
     color: white;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
@@ -81,4 +64,27 @@ button:hover {
     font-size: 1.2em;
     font-weight: bold;
     text-align: center;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .calculator {
+    border-color: #333;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    background-color: #1e1e1e;
+}
+
+body.dark-mode input,
+body.dark-mode button {
+    background-color: #333;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+body.dark-mode button:hover {
+    background-color: #444;
 }

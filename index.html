@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grade Calculator</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Grade Calculator</h1>
-        <div class="calculator">
-            <div id="grades-container">
-                <div class="grade-input">
-                    <input type="number" placeholder="Grade" class="grade" oninput="calculateGrade()">
-                    <div class="weight-container">
-                        <input type="number" placeholder="Weight (%)" class="weight" oninput="calculateGrade()" value="100">
-                        <span>%</span>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Grade Calculator</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Grade Calculator</h1>
+            <button id="toggle-dark-mode">Light</button>
+            <br />
+            <div class="calculator">
+                <div id="grades-container">
+                    <div class="grades">
+                        <input
+                            type="number"
+                            placeholder="Grade"
+                            class="grade"
+                            oninput="calculateGrade()"
+                        />
+                        <input
+                            type="number"
+                            placeholder="Weight (%)"
+                            class="weight"
+                            oninput="calculateGrade()"
+                            value="100"
+                        />
                     </div>
                 </div>
+                <button onclick="addGradeInput()">Add Another Grade</button>
+                <button class="reset-button" onclick="resetCalculator()">
+                    Reset
+                </button>
+                <div id="result">Please enter valid weights and grades.</div>
             </div>
-            <button onclick="addGradeInput()">Add Another Grade</button>
-            <div id="result">Weighted Average Grade: 0</div>
         </div>
-    </div>
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>
